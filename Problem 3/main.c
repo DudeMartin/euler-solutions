@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    const long given = 600851475143;
-    long number = given, factor = 2, largest = factor;
+    const unsigned long given = 600851475143;
+    unsigned long number = given, factor = 2, largest = factor;
     while (factor <= number) {
         if (number % factor == 0) {
             if (factor > largest) {
@@ -15,6 +15,6 @@ int main(int argc, char *argv[]) {
             factor++;
         }
     }
-    printf("Largest prime factor of %ld is: %ld.\n", given, largest);
+    printf("Largest prime factor of %lu is: %lu.\n", given, largest);
     return EXIT_SUCCESS;
 }
