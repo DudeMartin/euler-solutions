@@ -1,0 +1,12 @@
+No programming needed.
+
+We can use two simple facts:
+
+1 + 2 + 3 + 4  + ... = n(n + 1) / 2
+(1 ^ 2) + (2 ^ 2) + (3 ^ 2) + (4 ^ 2) + ... = n(n + 1)(2n + 1) / 6
+
+We can check the sample solution using n = 10 ("the first 10 natural numbers"):
+(((10 * (10 + 1)) / 2) ^ 2) - ((10 * (10 + 1) * (2 * 10 + 1)) / 6) = 2640
+
+Trivially, we can use this to find the solution for n = 100:
+(((100 * (100 + 1)) / 2) ^ 2) - ((100 * (100 + 1) * (2 * 100 + 1)) / 6) = 25164150
