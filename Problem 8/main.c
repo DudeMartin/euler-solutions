@@ -55,5 +55,5 @@ int main(int argc, char *argv[]) {
 }
 
 int toDigit(char c) {
-    return (c >= '0' || c <= '9') ? (c - '0') : c;
+    return c - '0';
 }
