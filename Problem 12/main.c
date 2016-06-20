@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     while (divisorCount(triangular(n)) <= 500) {
         n++;
     }
-    printf("Solution: %lld\n", triangular(n));
+    printf("Solution: %lld.\n", triangular(n));
     return EXIT_SUCCESS;
 }
 
