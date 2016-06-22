@@ -49,7 +49,7 @@ char **readTriangle(FILE *file, int *rows) {
             freeTriangle(triangle, i);
             return NULL;
         }
-        for (j = 0; j < i + 1; j++) {
+        for (j = 0; j <= i; j++) {
             if (fread(number, 1, 2, file) != 2) {
                 freeTriangle(triangle, i + 1);
                 return NULL;
