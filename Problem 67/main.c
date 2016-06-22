@@ -17,15 +17,17 @@ int main(int argc, char *argv[]) {
     if (triangle == NULL) {
         return EXIT_FAILURE;
     }
-    int row, column, left, right;
-    for (row = rows - 2; row >= 0; row--) {
-        for (column = 0; column <= row; column++) {
-            left  = triangle[row + 1][column];
-            right = triangle[row + 1][column + 1];
-            triangle[row][column] += MAX(left, right);
+    if (rows > 0) {
+        int row, column, left, right;
+        for (row = rows - 2; row >= 0; row--) {
+            for (column = 0; column <= row; column++) {
+                left  = triangle[row + 1][column];
+                right = triangle[row + 1][column + 1];
+                triangle[row][column] += MAX(left, right);
+            }
         }
+        printf("Solution: %d.\n", triangle[0][0]);
     }
-    printf("Solution: %d.\n", triangle[0][0]);
     freeTriangle(triangle, rows);
     return EXIT_SUCCESS;
 }
