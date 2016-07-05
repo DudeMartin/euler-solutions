@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
     int i, sum = 0;
     for (i = 2; i < 10000; i++) {
         int b = sumDivisors(i);
-        if (sumDivisors(b) == i && i < b) {
+        if (i < b && sumDivisors(b) == i) {
             sum += b + i;
         }
     }
